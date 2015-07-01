@@ -1,9 +1,10 @@
 // here is the javascript. 
-
+// get random numbers
 var getRandomNumbers=function(min, max){
 return Math.floor(Math.random() * (max - min) + min);
 };
 
+// make sure that number exists in an array
 var nonematched = function(arr, number){
 //it will check if the number contains in array. 
 // it will return true if number is not present in array. 
@@ -13,6 +14,7 @@ return false;
 return true;
 };
 
+// get the raondon alphabet to replace the existing character in a string. 
 var getrandomalphabet=function(uppercase){
         var letter= Math.random().toString(36).replace(/[^a-z]+/g, '').charAt(0);
 
@@ -25,7 +27,7 @@ return letter;
 
 
 
-
+// it returns two random positions in a string where characters can be replaced.
 var getrandom=function(min, max, shouldnotbethese){
 // this will return an array of two randon numbers. 
 var random1, random2, counter=1;
