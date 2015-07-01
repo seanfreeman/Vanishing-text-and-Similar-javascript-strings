@@ -2,10 +2,12 @@
 
 Fidle with these two projects on JSFIDDLE:
 
-1. https://jsfiddle.net/00pxmjo1/
-2. https://jsfiddle.net/6dwr38se/
+task 2. https://jsfiddle.net/00pxmjo1/
+task 1. https://jsfiddle.net/6dwr38se/
 
-1. Write a javascript function to take in a String, and output "n" similar looking strings.
+here are questions: 
+
+task 1. Write a javascript function to take in a String, and output "n" similar looking strings.
 
     Input : n = 5, String = "Hey New Yorkers"
 
@@ -13,7 +15,7 @@ Fidle with these two projects on JSFIDDLE:
 
 
 
-2. Write a CSS class with a javascript function which observes a time "t" value, and as the value of t decreases the characters associated with the div start vanishing.
+task 2. Write a CSS class with a javascript function which observes a time "t" value, and as the value of t decreases the characters associated with the div start vanishing.
 
     Example :<div class="vanishing" >Hey New Yorkers</div>
 
