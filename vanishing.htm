@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<div class="vanishing" style='white-space:pre' >Hey New Yorkers</div>
+<script>
+
+
+var getrandom=function(min , max, shouldnotbethese, count){
+// this will return an array of two randon numbers. 
+var random= []; var counter=1;
+for( var k = 0; k<count; k++){
+for(var i =0; counter==1;i++){
+random[k] = getRandomNumbers(min - 1, max + 1);
+ if((!(nonematched(shouldnotbethese,random[k])))){
+counter=0;
+}
+};
+counter=1;
+shouldnotbethese.push(random[k]);
+};
+return random;
+};
+
+var getRandomNumbers=function(min, max){
+return Math.floor(Math.random() * (max - min) + min);
+};
+
+var nonematched = function(arr, number){
+//it will check if the number contains in array. 
+// it will return true if number is not present in array. 
+if(arr.indexOf(number)==-1){
+return false;
+}
+return true;
+};
+
+
+(function(classname, timeValueInMilliSeconds){
+var ele = document.getElementsByClassName(classname)[0];
+var spacepositions=[];
+
+
+var str = ele.innerHTML.trim();
+var newstring =str;
+console.log(str);
+for(var j=0; j<str.length; j++){
+if(str[j]==" "){
+spacepositions.push(j);
+}
+}
+
+
+
+var clearinterval = window.setInterval(function(){
+if(!newstring.match(/[a-zA-Z0-9]/g)){
+window.clearInterval(this, clearinterval);
+return false;
+}
+console.log("in setintervalloop");
+var resultedstring = newstring.split("");
+
+var count = Math.ceil((newstring.length/100)*10);
+if(newstring.trim().length==1){
+count=1;
+}
+var randompositions=getrandom(0,str.length, spacepositions,count );
+
+for(var i=0; i<randompositions.length; i++){
+resultedstring[randompositions[i]]=" ";
+
+newstring = resultedstring.join("");
+spacepositions.push(randompositions[i]);
+
+};
+console.log(newstring);
+ele.innerHTML=newstring;
+},timeValueInMilliSeconds/10);
+
+
+
+}("vanishing",10000));
+</script>
+</body>
+</html>
