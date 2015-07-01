@@ -3,6 +3,7 @@
 Fidle with these two projects on JSFIDDLE:
 
 task 2. https://jsfiddle.net/00pxmjo1/
+
 task 1. https://jsfiddle.net/6dwr38se/
 
 here are questions: 
