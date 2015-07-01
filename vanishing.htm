@@ -24,12 +24,13 @@ shouldnotbethese.push(random[k]);
 return random;
 };
 
+// this one gets the random numbers 
 var getRandomNumbers=function(min, max){
 return Math.floor(Math.random() * (max - min) + min);
 };
 
+// this one checks if an array has an element in it
 var nonematched = function(arr, number){
-//it will check if the number contains in array. 
 // it will return true if number is not present in array. 
 if(arr.indexOf(number)==-1){
 return false;
@@ -39,35 +40,38 @@ return true;
 
 
 (function(classname, timeValueInMilliSeconds){
+ // get the element with the class
 var ele = document.getElementsByClassName(classname)[0];
+
 var spacepositions=[];
-
-
 var str = ele.innerHTML.trim();
 var newstring =str;
-console.log(str);
+
 for(var j=0; j<str.length; j++){
 if(str[j]==" "){
 spacepositions.push(j);
 }
 }
 
-
-
 var clearinterval = window.setInterval(function(){
 if(!newstring.match(/[a-zA-Z0-9]/g)){
 window.clearInterval(this, clearinterval);
 return false;
+// when all the characters in the string are replaced with " " , turn off this timer. 
 }
-console.log("in setintervalloop");
+
+
 var resultedstring = newstring.split("");
 
+// how many characters can be replaced every 10% of the time given
 var count = Math.ceil((newstring.length/100)*10);
 if(newstring.trim().length==1){
+ // just to make sure that if the string contains only character needs to be replaced to the count is one
 count=1;
 }
-var randompositions=getrandom(0,str.length, spacepositions,count );
 
+var randompositions=getrandom(0,str.length, spacepositions,count );
+// lets get the random positions in the string to replace characters in it. 
 for(var i=0; i<randompositions.length; i++){
 resultedstring[randompositions[i]]=" ";
 
@@ -75,8 +79,9 @@ newstring = resultedstring.join("");
 spacepositions.push(randompositions[i]);
 
 };
+
 console.log(newstring);
-ele.innerHTML=newstring;
+ele.innerHTML=newstring; // update the element.
 },timeValueInMilliSeconds/10);
 
 
