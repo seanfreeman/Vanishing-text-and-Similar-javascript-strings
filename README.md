@@ -1,5 +1,8 @@
 # Vanishing-text-and-Similar-javascript-strings
 
+Fidle with these two projects on JSFIDDLE:
+
+1. https://jsfiddle.net/00pxmjo1/
 
 1. Write a javascript function to take in a String, and output "n" similar looking strings.
 
