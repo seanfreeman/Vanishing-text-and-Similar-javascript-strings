@@ -6,7 +6,7 @@ task 2. https://jsfiddle.net/00pxmjo1/
 
 task 1. https://jsfiddle.net/6dwr38se/
 
-here are questions: 
+Here are the questions: 
 
 task 1. Write a javascript function to take in a String, and output "n" similar looking strings.
 
